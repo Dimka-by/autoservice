@@ -1,0 +1,99 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Наши услуги{% endblock %}
+
+{% block content %}
+
+
+<div  class = "container" style = "font-style: italic;" >
+     <h1 style="text-align:center">Цены на услуги автосервиса</h1>
+</div>
+
+
+<div class = "container"  style="text-align: center;">
+    <h3>Рулевое управление</h3>
+    <table style="display:inline-block;">
+            <tbody>
+                {% for el in rulevoe %}
+                <tr>
+                    <td style="border: 1px solid black;">{{el.work_type}}</td>
+                    <td style="border: 1px solid black;">{{el.price}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+    </table>
+
+
+    <h3>Тормозная система</h3>
+    <table style="display:inline-block;">
+            <tbody>
+                {% for el in tormoz %}
+                <tr>
+                    <td style="border: 1px solid black;">{{el.work_type}}</td>
+                    <td style="border: 1px solid black;">{{el.price}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+    </table>
+
+
+    <h3>Подвеска</h3>
+    <table style="display:inline-block;">
+            <tbody>
+                {% for el in podveska %}
+                <tr>
+                    <td style="border: 1px solid black;">{{el.work_type}}</td>
+                    <td style="border: 1px solid black;">{{el.price}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+    </table>
+
+
+    <h3>Двигатель</h3>
+    <table style="display:inline-block;">
+            <tbody>
+                {% for el in dvigatel %}
+                <tr>
+                    <td style="border: 1px solid black;">{{el.work_type}}</td>
+                    <td style="border: 1px solid black;">{{el.price}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+    </table>
+
+
+    <h3>Электрника и проводка</h3>
+    <table style="display:inline-block;">
+            <tbody>
+                {% for el in electron %}
+                <tr>
+                    <td style="border: 1px solid black;">{{el.work_type}}</td>
+                    <td style="border: 1px solid black;">{{el.price}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+    </table>
+
+
+    <h3>Выхлопная система</h3>
+    <table style="display:inline-block;">
+            <tbody>
+                {% for el in vihlop %}
+                <tr>
+                    <td style="border: 1px solid black;">{{el.work_type}}</td>
+                    <td style="border: 1px solid black;">{{el.price}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+    </table>
+
+
+
+</div>
+
+
+
+
+
+{% endblock %}
