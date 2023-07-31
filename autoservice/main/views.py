@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Rulevoe, Tormoz,Podveska, Dvigatel, Electron, Vihlop
+from .forms import AddClient
+#from models import Client
 
 
 def index(request):
@@ -22,4 +24,15 @@ def contact(request):
 
 
 def registr(request):
-    return render(request,'main/registr.html')
+    #return render(request,'main/registr.html')
+    if request.method == 'POST':
+        form = AddClient(request.POST)
+        if form.is_valid():
+            try:
+                form.save()
+                return redirect('index')
+            except:
+                form.add_error(None, 'Ошибка заполнения')
+    else:
+        form = AddClient()
+    return render(request, 'main/registr.html', {'form': form})

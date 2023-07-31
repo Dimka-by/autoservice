@@ -54,3 +54,10 @@ class Vihlop(models.Model):
 
     def __str__(self):# отображение в админ панеле название строки
         return self.work_type
+
+
+class Client(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    phone = models.CharField(max_length=20)
+    car = models.CharField(max_length=200)
