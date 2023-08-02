@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main.apps.MainConfig',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -84,6 +85,20 @@ DATABASES = {
         'PORT': 5432
     }
 }
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'djongo',
+#         'NAME': 'auto',
+#         'ENFORCE_SCHEMA': False,
+#         'CLIENT': {
+#             'host': 'localhost',
+#             'port': 27017,
+#         },
+#     }
+# }
+
 
 
 # Password validation
